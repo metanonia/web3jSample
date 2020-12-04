@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'org.web3j' version '4.8.1'
+}
+
+group 'com.metanonia.web3jSample'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs {
+                'build/generated/sources/web3j/main/java'
+                'src/main/java'
+            }
+        }
+        solidity {
+            srcDirs {
+                'src/main/solidity'
+            }
+        }
+    }
+}
+
+web3j {
+    generatedPackageName = 'com.metanonia.web3jSample.contracts'
+    excludedContracts = ['Mortal']
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
