@@ -1,6 +1,8 @@
 package com.metanonia.web3jtest.run;
 
-public class WallletSample {
+import com.metanonia.web3jSample.contracts.HelloWorld;
+
+public class ContractsDeploy {
     public static void main(String[] args) {
 
     }
